@@ -1,0 +1,14 @@
+name: Git Anti Virus Scan
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Git Anti Virus Scan
+        uses: actions/git-anti-virus-scan@v1
